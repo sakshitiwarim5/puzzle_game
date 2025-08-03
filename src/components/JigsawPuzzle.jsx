@@ -105,7 +105,7 @@ const CelebrationIcon = () => (
 const CompletionScreen = ({ imageUrl, onReset }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center p-4 z-50 animate-fade-in">
-      <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-8 w-full max-w-lg text-center animate-scale-in-up relative z-10 flex flex-col items-center">
+      <div className="bg-white rounded-xl shadow-md p-4 md:p-6 w-full max-w-sm text-center animate-scale-in-up relative z-10 flex flex-col items-center">
         <CelebrationIcon />
         <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-400 mt-2 mb-3">
           Congratulations!
@@ -391,15 +391,14 @@ export default function JigsawPuzzle() {
           .animate-stars-burst { animation: stars-burst 1s ease-out forwards 0.5s; }
           .animate-stars-burst .star { transform-origin: center; }
       `}</style>
-      <div className="w-full max-w-5xl mx-auto bg-white/60 backdrop-blur-sm rounded-2xl shadow-xl p-6 md:p-10 text-center border border-white/50">
-        <h1 className="text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-indigo-600 mb-2">
+      <div className="w-full max-w-5xl mx-auto bg-white/60 backdrop-blur-sm rounded-2xl shadow-xl px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-12 text-center border border-white/50">
+        <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-indigo-600 mb-2">
           Jigsaw Challenge
         </h1>
-        <p className="text-gray-700 mb-8 text-xl">
+        <p className="text-gray-700 mb-6 text-base md:text-lg">
           Answer the questions to reveal the hidden image!
         </p>
-
-        <div className="grid grid-cols-2 grid-rows-2 gap-2 w-[95vw] max-w-[900px] aspect-square perspective-1000 mx-auto">
+        <div className="grid grid-cols-2 grid-rows-2 gap-2 w-[80vw] max-w-[350px] aspect-square perspective-1000 mx-auto">
           {tiles.map((tile) => (
             <Tile key={tile.id} tile={tile} onTileClick={handleTileClick} />
           ))}
