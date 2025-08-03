@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-// Icon for closing the quiz modal
+// Icon for closing the quiz modal.
 const XIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
